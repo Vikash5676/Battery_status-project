@@ -26,7 +26,7 @@ document.getElementsByClassName("check-status", onclick = () => {
             if (battery.charging) {
                 charge.classList.add("active");
                 chargingTimeRef[0].innerText = "";
-                if (batteryLevel === "100%") {
+                if (`${parseInt(battery.level * 100)}%` === "100%") {
                     chargingLevel[0].innerText = "It seems Your battery is full  please, plugg out your Charger"
                     chargingLevel[0].style.backgroundColor = "rgba(0, 128, 0, 0.292)";
 

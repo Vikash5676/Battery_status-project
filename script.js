@@ -9,6 +9,7 @@ document.getElementsByClassName("check-status", onclick = () => {
     }
 
     navigator.getBattery().then((battery) => {
+        console.log(battery.dischargingTime,battery.level)
         function updateAllBatteryInfo() {
             updateChargingInfo();
             updateLevelInfo();
